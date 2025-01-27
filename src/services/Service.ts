@@ -4,7 +4,7 @@ const api = axios.create({
     baseURL: 'https://farmacia-jk1x.onrender.com/'
 })
 
-export const consultar = async (url: string, setDados: Function) => {
-    const resposta = await api.get(url)
+export const buscar = async (url: string, setDados: Function, header: Object) => {
+    const resposta = await api.get(url, header)
     setDados(resposta.data)
 }

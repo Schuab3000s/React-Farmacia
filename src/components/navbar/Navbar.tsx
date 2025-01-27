@@ -1,4 +1,5 @@
 import "../../assets/css/style.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -11,7 +12,7 @@ function Navbar() {
           Schuab's Farmácia
           <div className="flex gap-4">
             Produtos 
-            Categorias 
+            <Link to='/categoria' className='hover:underline'>Categoria</Link> 
             Cadastrar Categoria
           </div>
         </div>

@@ -1,5 +1,5 @@
 import Produto from './Produto';
-export default interface Catoegoria {
+export default interface Categoria {
     id: number;
     nome: string;
     produtos?: Produto[] | null;
