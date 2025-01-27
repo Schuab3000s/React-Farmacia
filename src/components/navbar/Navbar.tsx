@@ -6,13 +6,15 @@ function Navbar() {
     <>
       <div
         className="w-full flex justify-center py-4
-                   bg-indigo-900 text-white"
+                   bg-sky-600 text-white"
       >
         <div className="container flex justify-between text-lg">
-          Schuab's Farmácia
+          <Link to="/home" className="hover:underline">
+            Schuab's Farmácia
+          </Link>
           <div className="flex gap-4">
             Produtos
-            <Link to="/categoria" className="hover:underline">
+            <Link to="/categorias" className="hover:underline">
               Categoria
             </Link>
             <Link to="/cadastrarcategoria" className="hover:underline">
