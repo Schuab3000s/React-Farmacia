@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
 
-function FormCategoria() {
+function FormCategoria (){
   const navigate = useNavigate();
 
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -17,6 +17,7 @@ function FormCategoria() {
       await buscar(`/categorias/${id}`, setCategoria);
     } catch (error: any) {
       if (error.toString().includes("403")) {
+        alert("Erro ao buscar a categoria.");
       }
     }
   }
@@ -44,7 +45,7 @@ function FormCategoria() {
 
     if (id !== undefined) {
       try {
-        await atualizar(`/categorias`, categoria, setCategoria);
+        await atualizar(`/categorias/${id}`, categoria, setCategoria);
         alert("A categoria foi atualizado com sucesso!");
       } catch (error: any) {
         if (error.toString().includes("403")) {
@@ -76,11 +77,11 @@ function FormCategoria() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Nome da categoria</label>
+          <label htmlFor="nome">Nome da categoria</label>
           <input
             type="text"
             placeholder="Digite aqui o nome da Categoria"
-            name="descricao"
+            name="nome"
             className="border-2 border-slate-700 rounded p-2 bg-sky-700/20"
             value={categoria.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
