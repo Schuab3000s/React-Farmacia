@@ -10,8 +10,6 @@ function DeletarCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-
-
   const { id } = useParams<{ id: string }>();
 
   async function buscarPorId(id: string) {
@@ -19,7 +17,6 @@ function DeletarCategoria() {
       await buscar(`/categorias/${id}`, setCategoria);
     } catch (error: any) {
       if (error.toString().includes("403")) {
-   
       }
     }
   }
@@ -39,7 +36,6 @@ function DeletarCategoria() {
       alert("Categoria apagado com sucesso");
     } catch (error: any) {
       if (error.toString().includes("403")) {
-   
       } else {
         alert("Erro ao deletar a categoria.");
       }

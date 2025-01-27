@@ -11,9 +11,13 @@ function Navbar() {
         <div className="container flex justify-between text-lg">
           Schuab's Farmácia
           <div className="flex gap-4">
-            Produtos 
-            <Link to='/categoria' className='hover:underline'>Categoria</Link> 
-            <Link to='/cadastrarcategoria' className='hover:underline'>Cadastrar Categoria</Link>
+            Produtos
+            <Link to="/categoria" className="hover:underline">
+              Categoria
+            </Link>
+            <Link to="/cadastrarcategoria" className="hover:underline">
+              Cadastrar Categoria
+            </Link>
           </div>
         </div>
       </div>
