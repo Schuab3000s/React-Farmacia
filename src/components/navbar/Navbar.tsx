@@ -10,7 +10,9 @@ function Navbar() {
         <div className="container flex justify-between text-lg">
           Schuab's Farmácia
           <div className="flex gap-4">
-            Produtos Categorias Cadastrar Categoria Sair
+            Produtos 
+            Categorias 
+            Cadastrar Categoria
           </div>
         </div>
       </div>
